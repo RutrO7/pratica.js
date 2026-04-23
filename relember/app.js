@@ -27,7 +27,24 @@ const numero = [];
 for (let i = 0; i <= 100; i++) {
   numero.push(i);
 }
-console.time("Test");
 contador(...numero);
-console.timeEnd("Test");
- 
+// Esse comando faz com que consiga fazer uma conta, basicamente uma calculadora;
+// Uso a function(){} calcular para passar o parametro `Dos numeros que quero para;
+// a conta, e qual operação quero efetuar`
+function calcular(num1, num2, operacao) {
+  return operacao(num1, num2);
+}
+function mais(num1, num2) {
+  return num1 + num2;
+}
+function menos(num1, num2) {
+  return num1 - num2;
+}
+function multi(num1, num2) {
+  return num1 * num2;
+}
+function divisao(num1, num2) {
+  return num1 % num2;
+}
+let resultaoDaOperacao = calcular(6, 5, menos);
+console.log(resultaoDaOperacao);
