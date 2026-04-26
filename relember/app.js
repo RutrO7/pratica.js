@@ -28,23 +28,35 @@ for (let i = 0; i <= 100; i++) {
   numero.push(i);
 }
 contador(...numero);
-// Esse comando faz com que consiga fazer uma conta, basicamente uma calculadora;
-// Uso a function(){} calcular para passar o parametro `Dos numeros que quero para;
-// a conta, e qual operação quero efetuar`
-function calcular(num1, num2, operacao) {
-  return operacao(num1, num2);
+
+{
+  // Esse comando faz com que consiga fazer uma conta, basicamente uma calculadora;
+  // Uso a function(){} calcular para passar o parametro `Dos numeros que quero para;
+  // a conta, e qual operação quero efetuar`
+  function calcular(num1, num2, operacao) {
+    return operacao(num1, num2);
+  }
+  function mais(num1, num2) {
+    return num1 + num2;
+  }
+  function menos(num1, num2) {
+    return num1 - num2;
+  }
+  function multi(num1, num2) {
+    return num1 * num2;
+  }
+  function divisao(num1, num2) {
+    return num1 / num2;
+  }
+  let resultaoDaOperacao = calcular(6, 5, divisao);
+  console.log(resultaoDaOperacao);
+  // vou refatorar esse codigo jaja, já sei como só uma boa pratica;
 }
-function mais(num1, num2) {
-  return num1 + num2;
+
+let n = 5;
+for (let i = 1; i <= n; i++) {
+  for (let j = 1; j <= i; j++) {
+    console.log("*");
+  }
+  console.log(i);
 }
-function menos(num1, num2) {
-  return num1 - num2;
-}
-function multi(num1, num2) {
-  return num1 * num2;
-}
-function divisao(num1, num2) {
-  return num1 / num2;
-}
-let resultaoDaOperacao = calcular(6, 5, divisao);
-console.log(resultaoDaOperacao);
