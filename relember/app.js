@@ -7,6 +7,7 @@
 }
 
 {
+  //Essa função cria datas e horários no momento que é chamada
   const hora = new Date();
   console.log(
     `hoje é dia ${hora.getDate()}, do mês ${hora.getMonth()}, do ano ${hora.getFullYear()}`,
@@ -24,7 +25,7 @@ function contador(...numbers) {
 }
 
 const numero = [];
-for (let i = 0; i <= 100; i++) {
+for (let i = 0; i <= 10; i++) {
   numero.push(i);
 }
 contador(...numero);
@@ -49,14 +50,34 @@ contador(...numero);
     return num1 / num2;
   }
   let resultaoDaOperacao = calcular(6, 5, divisao);
-  console.log(resultaoDaOperacao);
+  console.log(`-O seu resultado é: ${resultaoDaOperacao}`);
   // vou refatorar esse codigo jaja, já sei como só uma boa pratica;
 }
 
-let n = 5;
-for (let i = 1; i <= n; i++) {
-  for (let j = 1; j <= i; j++) {
-    console.log("*");
+{
+  // Refatorado!
+  const funcoes = {
+    soma: (a, b) => a + b,
+    menos: (a, b) => a - b,
+    vezes: (a, b) => a * b,
+    divisao: (a, b) => a / b,
+  };
+
+  function operacoes(num1, num2, operacao) {
+    return funcoes[operacao](num1, num2);
   }
-  console.log(i);
+  let resultado = operacoes(5, 10, "vezes");
+  console.log(`-Seu novo resultado é: ${resultado}`);
+}
+
+{
+  // Um teste deu uma função em pitoy que eu encontrei;
+
+  let n = 5;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= i; j++) {
+      console.log("*");
+    }
+    console.log(i);
+  }
 }
