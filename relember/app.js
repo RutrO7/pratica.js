@@ -99,13 +99,14 @@ ME DEU UMA CANSEIRA ESSA MERDA
 DEVO DER LEVADO MAIS DE 40 MINUTOS NESTA 
 TASK*/
   const hora = new Date();
+  console.log(`Agora são ${hora.getHours()}`);
   console.log(
-    hora >= 0 && hora <= 6
+    hora.getHours() >= 0 && hora.getHours() <= 6
       ? "Agr é madrugada, vai dormir!"
-      : hora >= 6 && hora <= 12
-        ? "Hj é uma bela manha!"
-        : hora >= 12 && hora <= 18
-          ? "testa até tardinho já"
-          : " Puts já é noite",
+      : hora.getHours() >= 6 && hora.getHours() <= 12
+        ? "Hoje, é uma bela manha!"
+        : hora.getHours() >= 12 && hora.getHours() <= 18
+          ? "Já está até tardinho!"
+          : " Puts, já é noite!",
   );
 }
