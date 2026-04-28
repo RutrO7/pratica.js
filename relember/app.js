@@ -81,3 +81,10 @@ contador(...numero);
     console.log(i);
   }
 }
+
+/* quando eu quiser fazer uma tabela
+no console, usar .table ex: console.table([])*/
+console.table([
+  ["🍌", "🥭", true],
+  ["❤️", "🍰", true],
+]);
