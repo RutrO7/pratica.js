@@ -82,9 +82,30 @@ contador(...numero);
   }
 }
 
-/* quando eu quiser fazer uma tabela
+{
+  /* quando eu quiser fazer uma tabela
 no console, usar .table ex: console.table([])*/
-console.table([
-  ["🍌", "🥭", true],
-  ["❤️", "🍰", true],
-]);
+  console.table([
+    ["🍌", "🥭", true],
+    ["❤️", "🍰", true],
+  ]);
+}
+
+{
+  /*
+Eu quero fazer tipo um e se, porém com 
+comparações  && ? :
+ME DEU UMA CANSEIRA ESSA MERDA
+DEVO DER LEVADO MAIS DE 40 MINUTOS NESTA 
+TASK*/
+  const hora = new Date();
+  console.log(
+    hora >= 0 && hora <= 6
+      ? "Agr é madrugada, vai dormir!"
+      : hora >= 6 && hora <= 12
+        ? "Hj é uma bela manha!"
+        : hora >= 12 && hora <= 18
+          ? "testa até tardinho já"
+          : " Puts já é noite",
+  );
+}
